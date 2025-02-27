@@ -3,7 +3,6 @@
 import React from 'react';
 
 interface MoviesSectionProps {
-  // HTMLElement | null을 허용하도록 타입 수정
   sectionRef: React.RefObject<HTMLElement | null>;
 }
 
@@ -13,7 +12,8 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
       <div className="container">
         <h2>주요 작품</h2>
         
-        <div className="grid grid-cols-3">
+        {/* 반응형 그리드 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[1, 2, 3, 4, 5, 6].map((item) => (
             <div key={item} className="card">
               <div 
@@ -40,10 +40,10 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
                 </div>
               </div>
               <div className="card-body">
-                <h3>영화 제목 {item}</h3>
-                <p className="text-gray">감독: 홍길동</p>
-                <p className="text-gray">출연: 김배우, 이배우</p>
-                <p className="text-gray">120분</p>
+                <h3 style={{ fontSize: '1rem' }}>영화 제목 {item}</h3> {/* 제목 크기 조정 */}
+                <p className="text-gray" style={{ fontSize: '0.9rem' }}>감독: 홍길동</p> {/* 폰트 크기 조정 */}
+                <p className="text-gray" style={{ fontSize: '0.9rem' }}>출연: 김배우, 이배우</p> {/* 폰트 크기 조정 */}
+                <p className="text-gray" style={{ fontSize: '0.9rem' }}>120분</p> {/* 폰트 크기 조정 */}
                 <button 
                   style={{
                     marginTop: '1rem',
@@ -53,7 +53,8 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
                     color: '#facc15',
                     padding: '0.5rem',
                     borderRadius: '0.25rem',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    fontSize: '0.9rem',  // 모바일에서도 버튼 크기 조정
                   }}
                 >
                   자세히 보기
@@ -72,7 +73,8 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
               padding: '0.75rem 2rem',
               borderRadius: '0.25rem',
               fontWeight: 'bold',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              fontSize: '0.9rem',  // 버튼 폰트 크기 모바일에서 줄이기
             }}
           >
             모든 작품 보기
