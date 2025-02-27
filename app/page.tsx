@@ -14,7 +14,7 @@ export default function Home() {
   // 스크롤 애니메이션 훅 사용
   useScrollAnimation();
   
-  // 섹션 참조
+  // 섹션 참조 - 타입 수정
   const sectionRefs = [
     useRef<HTMLElement>(null),
     useRef<HTMLElement>(null),
@@ -48,7 +48,7 @@ export default function Home() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, []);  // React Hook 의존성 배열에 sectionRefs 추가할 필요 없음 (참조는 변경되지 않음)
 
   return (
     <main>

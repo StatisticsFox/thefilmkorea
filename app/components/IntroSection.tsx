@@ -3,14 +3,15 @@
 import React from 'react';
 
 interface IntroSectionProps {
-  sectionRef: React.RefObject<HTMLElement>;
+  // HTMLElement | null을 허용하도록 타입 수정
+  sectionRef: React.RefObject<HTMLElement | null>;
 }
 
 const IntroSection: React.FC<IntroSectionProps> = ({ sectionRef }) => {
   return (
     <section
       id="intro"
-      ref={sectionRef}
+      ref={sectionRef as React.RefObject<HTMLElement>}
       style={{
         backgroundImage: 'url(/images/background.JPG)',
         backgroundSize: 'cover',
