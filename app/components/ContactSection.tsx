@@ -3,7 +3,8 @@
 import React from 'react';
 
 interface ContactSectionProps {
-  sectionRef: React.RefObject<HTMLElement>;
+  // HTMLElement | null을 허용하도록 타입 수정
+  sectionRef: React.RefObject<HTMLElement | null>;
 }
 
 const ContactSection: React.FC<ContactSectionProps> = ({ sectionRef }) => {
