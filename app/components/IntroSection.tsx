@@ -14,9 +14,11 @@ const IntroSection: React.FC<IntroSectionProps> = ({ sectionRef }) => {
       ref={sectionRef as React.RefObject<HTMLElement>}
       style={{
         backgroundImage: 'url(/images/background.JPG)',
-        backgroundSize: 'cover',
+        backgroundSize: 'auto 100%',
         backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
         position: 'relative',
+        height: '50vh',
       }}
     >
       {/* 오버레이 추가 */}
@@ -35,7 +37,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({ sectionRef }) => {
           <h2 
             style={{ 
               fontSize: '4.5rem', 
-              color: '#4ecca3', 
+              color: '#00000', 
               marginBottom: '1.5rem',
               textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
             }}
@@ -46,8 +48,8 @@ const IntroSection: React.FC<IntroSectionProps> = ({ sectionRef }) => {
           <p 
             style={{ 
               fontSize: '2.5rem', 
-              color: '#4ecca3', 
-              maxWidth: '800px', 
+              color: '#00000', 
+              maxWidth: '900px', 
               margin: '0 auto', 
               marginBottom: '3rem',
               textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
