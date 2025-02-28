@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 
 interface ContactSectionProps {
@@ -11,17 +10,9 @@ const ContactSection: React.FC<ContactSectionProps> = ({ sectionRef }) => {
     <section id="contact" ref={sectionRef}>
       <div className="container">
         <h2>문의하기</h2>
-        
-        <div style={{ background: '#1f1f1f', padding: '2rem', borderRadius: '0.5rem' }}>
+        <div className="contact-form-container">
           <form>
-            <div 
-              style={{ 
-                display: 'grid', 
-                gridTemplateColumns: '1fr 1fr', 
-                gap: '1rem', 
-                marginBottom: '1rem' 
-              }}
-            >
+            <div className="form-grid">
               <div className="form-group">
                 <label>이름</label>
                 <input type="text" placeholder="이름을 입력하세요" />
@@ -39,7 +30,9 @@ const ContactSection: React.FC<ContactSectionProps> = ({ sectionRef }) => {
               <label>문의내용</label>
               <textarea rows={5} placeholder="문의내용을 입력하세요" />
             </div>
-            <button className="btn">보내기</button>
+            <button className="btn">
+              <span>보내기</span>
+            </button>
           </form>
         </div>
       </div>

@@ -2,6 +2,8 @@
 import { useEffect, useRef, useState } from 'react';
 import Header from './components/Header';
 import IntroSection from './components/IntroSection';
+import TopicSection from './components/TopicSection';
+import CinemaIntroSection from './components/CinemaIntroSection';
 import MoviesSection from './components/MoviesSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
@@ -14,8 +16,10 @@ export default function Home() {
   // 스크롤 애니메이션 훅 사용
   useScrollAnimation();
   
-  // 섹션 참조 - 타입 수정
+  // 섹션 참조
   const sectionRefs = [
+    useRef<HTMLElement>(null),
+    useRef<HTMLElement>(null),
     useRef<HTMLElement>(null),
     useRef<HTMLElement>(null),
     useRef<HTMLElement>(null),
@@ -40,7 +44,7 @@ export default function Home() {
       });
       setCurrentSection(current);
     };
-  
+    
     // 스크롤 이벤트 리스너 등록
     window.addEventListener('scroll', handleScroll);
     
@@ -48,27 +52,35 @@ export default function Home() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);  // React Hook 의존성 배열에 sectionRefs 추가할 필요 없음 (참조는 변경되지 않음)
-
+  }, []); // React Hook 의존성 배열에 sectionRefs 추가할 필요 없음 (참조는 변경되지 않음)
+  
   return (
-    <main>
+    <div className="adjacent-sections-layout">
       {/* 고정 헤더 */}
       <Header currentSection={currentSection} />
-
-      {/* 인트로 섹션 */}
-      <IntroSection sectionRef={sectionRefs[0]} />
-
-      {/* 작품들 섹션 */}
-      <MoviesSection sectionRef={sectionRefs[1]} />
-
-      {/* 배급 소개 섹션 */}
-      <AboutSection sectionRef={sectionRefs[2]} />
-
-      {/* 문의 섹션 */}
-      <ContactSection sectionRef={sectionRefs[3]} />
-
-      {/* 푸터 */}
-      <Footer />
-    </main>
+      
+      <main>
+        {/* 인트로 섹션 */}
+        <IntroSection sectionRef={sectionRefs[0]} />
+        
+        {/* 토픽 섹션 */}
+        <TopicSection sectionRef={sectionRefs[1]} />
+        
+        {/* 시네마 소개 섹션 */}
+        <CinemaIntroSection sectionRef={sectionRefs[2]} />
+        
+        {/* 작품들 섹션 */}
+        <MoviesSection sectionRef={sectionRefs[3]} />
+        
+        {/* 배급 소개 섹션 */}
+        <AboutSection sectionRef={sectionRefs[4]} />
+        
+        {/* 문의 섹션 */}
+        <ContactSection sectionRef={sectionRefs[5]} />
+        
+        {/* 푸터 */}
+        <Footer />
+      </main>
+    </div>
   );
 }

@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 
 interface IntroSectionProps {
@@ -13,7 +12,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({ sectionRef }) => {
       id="intro"
       ref={sectionRef as React.RefObject<HTMLElement>}
       style={{
-        backgroundImage: 'url(/images/background.JPG)',
+        backgroundImage: 'url(/images/bg.png)',
         backgroundSize: 'auto 100%',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -21,36 +20,26 @@ const IntroSection: React.FC<IntroSectionProps> = ({ sectionRef }) => {
         height: '50vh',
       }}
     >
-      {/* 오버레이 추가 */}
-      <div 
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        }}
-      />
+      {/* 오버레이 제거함 */}
       <div className="container text-center" style={{ position: 'relative', zIndex: 10 }}>
         <div className="text-reveal-container">
-          <h2 
-            style={{ 
-              fontSize: '4.5rem', 
-              color: '#00000', 
+          <h2
+            style={{
+              fontSize: '4.5rem',
+              color: '#00000',
               marginBottom: '1.5rem',
               textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
             }}
             className="scroll-reveal"
           >
-            제사장 시네마
+            The Film Korea
           </h2>
-          <p 
-            style={{ 
-              fontSize: '2.5rem', 
-              color: '#00000', 
-              maxWidth: '900px', 
-              margin: '0 auto', 
+          <p
+            style={{
+              fontSize: '2.5rem',
+              color: '#00000',
+              maxWidth: '900px',
+              margin: '0 auto',
               marginBottom: '3rem',
               textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
             }}
@@ -58,7 +47,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({ sectionRef }) => {
           >
             새로운 관점으로 세상을 바라보는 독립·예술영화 배급사
           </p>
-          <button 
+          <button
             className="btn scroll-reveal delay-600"
             style={{
               fontSize: '1.2rem',
@@ -68,9 +57,8 @@ const IntroSection: React.FC<IntroSectionProps> = ({ sectionRef }) => {
             자세히 보기
           </button>
         </div>
-        
         {/* 스크롤 화살표 */}
-        <div 
+        <div
           style={{
             position: 'absolute',
             bottom: '2rem',
