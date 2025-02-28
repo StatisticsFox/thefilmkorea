@@ -28,13 +28,13 @@ const TopicSection: React.FC<TopicSectionProps> = ({ sectionRef }) => {
           <Link href="/topics/1" className="compact-topic-item">
             <div className="compact-topic-content">
               <h3 className="compact-topic-title">
-                &lt;여성국극 꿈어질듯 이어지고 사라질듯 영원하다&gt; 3월 19일 개봉
+                &lt;잊혀진 별의 기억&gt; 영화 제작 확정!
               </h3>
               <p className="compact-topic-excerpt">
-                &ldquo;이지도 여성국극하는 꿈을 꾸는 거지&rdquo;&lt;여성국극 꿈어질듯 이어지고 사라질듯 영원하다&gt;
+                &ldquo;우리의 기억은 언제나 서로를 향해 있었다&rdquo; 시간을 넘나드는 잊지 못할 사랑 이야기
               </p>
               <p className="compact-topic-description">
-                3월 19일 개봉 확정 &티저 포스터 공개!단 위, 남자와 여자를 뒤어넘어 예술이 되는 순간
+                우주의 비밀, 잊혀진 기억, 그리고 다시 만난 두 영혼의 놀라운 여정! 로맨틱 SF 드라마의 새로운 패러다임
               </p>
               <div className="compact-topic-meta">
                 <span className="compact-topic-author">관리자</span>
@@ -47,13 +47,13 @@ const TopicSection: React.FC<TopicSectionProps> = ({ sectionRef }) => {
           <Link href="/topics/2" className="compact-topic-item">
             <div className="compact-topic-content">
               <h3 className="compact-topic-title">
-                &lt;두 사람&gt;2/12 오늘 개봉! 전국 개봉관 리스트 대공개
+                &lt;비밀의 정원&gt; 극장 개봉 확정 & 스틸컷 16종 최초 공개 예정
               </h3>
               <p className="compact-topic-excerpt">
-                &ldquo;가장 낮선 곳에서, 가장 깊은 사랑으로&rdquo;&lt;두 사람&gt; 바로 오늘! 2월 12일 극장 대개봉 🦋
+              &ldquo;모든 비밀은 결국 꽃피울 준비를 한다&rdquo; – 전 세계가 주목하는 미스터리 로맨스
               </p>
               <p className="compact-topic-description">
-                🎬예매 바로가기▶ 인스타페이스: https://bit.ly/3A3Kfmi▶티켓링크: https://buly.kr/9
+               숨겨진 과거, 되살아나는 기억, 그리고 용서의 순간을 담은 스틸컷 16종 공개!
               </p>
               <div className="compact-topic-meta">
                 <span className="compact-topic-author">관리자</span>
@@ -66,13 +66,13 @@ const TopicSection: React.FC<TopicSectionProps> = ({ sectionRef }) => {
           <Link href="/topics/3" className="compact-topic-item">
             <div className="compact-topic-content">
               <h3 className="compact-topic-title">
-                &lt;두 사람&gt;2월 12일 극장 개봉 확정 & 보도스틸 16종 최초 공개!
+                &lt;현재진행형 이별&gt; 끊임없이 흔들리는 감정의 지도
               </h3>
               <p className="compact-topic-excerpt">
-                &ldquo;36년 전의 못 섞일이 반평생의 사랑이 됐다&rdquo; – 중앙일보 나원정 기자 세계 각국 초청 &lt;두 사람&gt;
+               &ldquo;아직 끝나지 않은 우리의 이야기&rdquo; 사랑과 이별 사이, 우리의 감정을 향한 여정
               </p>
               <p className="compact-topic-description">
-                2월 12일 전국 극장 개봉 확정!평생에 걸친 사랑을 연결하는 보도 스틸 16종 공개!
+                끝나지 않은 사랑, 끝나지 않은 이별, 끝나지 않은 우리의 이야기. 감정의 미로 속에서 펼쳐지는 감동의 이야기
               </p>
               <div className="compact-topic-meta">
                 <span className="compact-topic-author">관리자</span>

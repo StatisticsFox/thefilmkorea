@@ -36,14 +36,14 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
                     fontWeight: 'bold'
                   }}
                 >
-                  2023
+                  2022
                 </div>
               </div>
               <div className="card-body">
-                <h3>영화 제목 {item}</h3>
-                <p className="text-gray">감독: 홍길동</p>
-                <p className="text-gray">출연: 김배우, 이배우</p>
-                <p className="text-gray">120분</p>
+                <h3>동감 {item}</h3>
+                <p className="text-gray">감독: 서은영</p>
+                <p className="text-gray">출연: 여진구, 조이현</p>
+                <p className="text-gray">114분</p>
                 <button 
                   style={{
                     marginTop: '1rem',
