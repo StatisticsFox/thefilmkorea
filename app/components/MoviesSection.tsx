@@ -22,12 +22,12 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
   const moviesData: MovieData[] = [
     {
       id: 1,
-      title: "동감",
-      year: "2022",
-      director: "서은영",
-      cast: "여진구, 조이현",
-      duration: "114분",
-      posterImage: "./images/donggam.png", // 실제 이미지 경로로 교체 필요
+      title: "호조",
+      year: "2025",
+      director: "권혁만",
+      cast: "최민우, 장정식, 이환의",
+      duration: "117분 36초",
+      posterImage: "./images/hozo.png", // 실제 이미지 경로로 교체 필요
       buttonColor: "#facc15"
     },
     {
@@ -72,13 +72,13 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
     },
     {
       id: 6,
-      title: "뉴 월드",
+      title: "동감",
       year: "2022",
-      director: "박훈정",
-      cast: "최민식, 황정민",
-      duration: "134분",
-      posterImage: "/images/movie6.jpg", // 실제 이미지 경로로 교체 필요
-      buttonColor: "#ef4444"
+      director: "서은영",
+      cast: "여진구, 조이현",
+      duration: "114분",
+      posterImage: "./images/donggam.png", // 실제 이미지 경로로 교체 필요
+      buttonColor: "#facc15"
     }
   ];
 
