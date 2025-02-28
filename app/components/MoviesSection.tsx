@@ -1,34 +1,116 @@
 'use client';
-
 import React from 'react';
 
+// 영화 데이터를 위한 인터페이스 정의
+interface MovieData {
+  id: number;
+  title: string;
+  year: string;
+  director: string;
+  cast: string;
+  duration: string;
+  posterImage: string; // 포스터 이미지 URL
+  buttonColor?: string; // 버튼 색상 커스터마이징 가능
+}
+
 interface MoviesSectionProps {
-  // HTMLElement | null을 허용하도록 타입 수정
   sectionRef: React.RefObject<HTMLElement | null>;
 }
 
 const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
+  // 각 영화마다 다른 데이터를 정의
+  const moviesData: MovieData[] = [
+    {
+      id: 1,
+      title: "동감",
+      year: "2022",
+      director: "서은영",
+      cast: "여진구, 조이현",
+      duration: "114분",
+      posterImage: "./images/donggam.png", // 실제 이미지 경로로 교체 필요
+      buttonColor: "#facc15"
+    },
+    {
+      id: 2,
+      title: "일주일간 친구",
+      year: "2023",
+      director: "임효겸",
+      cast: "조금맥, 린이",
+      duration: "106분",
+      posterImage: "/images/weekfriends.png", // 실제 이미지 경로로 교체 필요
+      buttonColor: "#60a5fa"
+    },
+    {
+      id: 3,
+      title: "투게더",
+      year: "2021",
+      director: "김한민",
+      cast: "정우성, 한효주",
+      duration: "107분",
+      posterImage: "", // 실제 이미지 경로로 교체 필요
+      buttonColor: "#facc15"
+    },
+    {
+      id: 4,
+      title: "여름날",
+      year: "2024",
+      director: "김태용",
+      cast: "김태리, 남주혁",
+      duration: "118분",
+      posterImage: "/images/movie4.jpg", // 실제 이미지 경로로 교체 필요
+      buttonColor: "#10b981"
+    },
+    {
+      id: 5,
+      title: "겨울 꿈",
+      year: "2023",
+      director: "홍상수",
+      cast: "김민희, 서영화",
+      duration: "92분",
+      posterImage: "/images/movie5.jpg", // 실제 이미지 경로로 교체 필요
+      buttonColor: "#facc15"
+    },
+    {
+      id: 6,
+      title: "뉴 월드",
+      year: "2022",
+      director: "박훈정",
+      cast: "최민식, 황정민",
+      duration: "134분",
+      posterImage: "/images/movie6.jpg", // 실제 이미지 경로로 교체 필요
+      buttonColor: "#ef4444"
+    }
+  ];
+
   return (
     <section id="movies" ref={sectionRef}>
       <div className="container">
         <h2>주요 작품</h2>
-        
         <div className="grid grid-cols-3">
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <div key={item} className="card">
-              <div 
-                style={{ 
-                  aspectRatio: '2/3', 
-                  background: '#222',
-                  position: 'relative'
+          {moviesData.map((movie) => (
+            <div key={movie.id} className="card">
+              <div
+                style={{
+                  aspectRatio: '2/3',
+                  position: 'relative',
+                  overflow: 'hidden'
                 }}
               >
-                <div 
-                  style={{ 
-                    position: 'absolute', 
-                    bottom: '1rem', 
+                <img 
+                  src={movie.posterImage}
+                  alt={`${movie.title} 포스터`}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: '1rem',
                     left: '1rem',
-                    background: '#facc15',
+                    background: movie.buttonColor || '#facc15',
                     color: 'black',
                     padding: '0.25rem 0.5rem',
                     borderRadius: '0.25rem',
@@ -36,21 +118,21 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
                     fontWeight: 'bold'
                   }}
                 >
-                  2022
+                  {movie.year}
                 </div>
               </div>
               <div className="card-body">
-                <h3>동감 {item}</h3>
-                <p className="text-gray">감독: 서은영</p>
-                <p className="text-gray">출연: 여진구, 조이현</p>
-                <p className="text-gray">114분</p>
-                <button 
+                <h3>{movie.title}</h3>
+                <p className="text-gray">감독: {movie.director}</p>
+                <p className="text-gray">출연: {movie.cast}</p>
+                <p className="text-gray">{movie.duration}</p>
+                <button
                   style={{
                     marginTop: '1rem',
                     width: '100%',
                     background: 'transparent',
-                    border: '1px solid #facc15',
-                    color: '#facc15',
+                    border: `1px solid ${movie.buttonColor || '#facc15'}`,
+                    color: movie.buttonColor || '#facc15',
                     padding: '0.5rem',
                     borderRadius: '0.25rem',
                     cursor: 'pointer'
@@ -62,9 +144,8 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
             </div>
           ))}
         </div>
-        
         <div className="text-center mt-8">
-          <button 
+          <button
             style={{
               border: '1px solid white',
               background: 'transparent',
