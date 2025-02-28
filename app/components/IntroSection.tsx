@@ -47,7 +47,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({ sectionRef }) => {
           >
             새로운 관점으로 세상을 바라보는 독립·예술영화 배급사
           </p>
-          <button
+          {/* <button
             className="btn scroll-reveal delay-600"
             style={{
               fontSize: '1.2rem',
@@ -55,7 +55,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({ sectionRef }) => {
             }}
           >
             자세히 보기
-          </button>
+          </button> */}
         </div>
         {/* 스크롤 화살표 */}
         <div
