@@ -62,12 +62,12 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
     },
     {
       id: 5,
-      title: "겨울 꿈",
-      year: "2023",
-      director: "홍상수",
-      cast: "김민희, 서영화",
-      duration: "92분",
-      posterImage: "/images/movie5.jpg", // 실제 이미지 경로로 교체 필요
+      title: "콩나물",
+      year: "2013",
+      director: "윤가은",
+      cast: "김수안, 오동주",
+      duration: "20분",
+      posterImage: "/images/sprout.png", // 실제 이미지 경로로 교체 필요
       buttonColor: "#facc15"
     },
     {
