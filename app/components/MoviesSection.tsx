@@ -42,12 +42,12 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
     },
     {
       id: 3,
-      title: "투게더",
-      year: "2021",
-      director: "김한민",
-      cast: "정우성, 한효주",
-      duration: "107분",
-      posterImage: "", // 실제 이미지 경로로 교체 필요
+      title: "울고싶은 나는 고양이 가면을 쓴다",
+      year: "2020",
+      director: "사토 준이치",
+      cast: "시다 미라이, 하나에 나츠키",
+      duration: "104분",
+      posterImage: "/images/cat.png", // 실제 이미지 경로로 교체 필요
       buttonColor: "#facc15"
     },
     {
