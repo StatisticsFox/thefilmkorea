@@ -13,13 +13,13 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-3">
             <div className="footer-section">
               <h4>주소</h4>
-              <p>서울특별시 종로구 돈화문로 30</p>
-              <p>종로5가 167-1</p>
+              <p>서울특별시 강남구 태해산로</p>
+              <p>107-3 아주빌딩</p>
             </div>
             <div className="footer-section">
               <h4>연락처</h4>
-              <p>전화: 02-1234-5678</p>
-              <p>이메일: contact@cinemadal.com</p>
+              <p>전화: 010-7451-1002</p>
+              <p>이메일: thfilmkorea@gmail.com</p>
             </div>
             <div className="footer-section">
               <h4>바로가기</h4>
