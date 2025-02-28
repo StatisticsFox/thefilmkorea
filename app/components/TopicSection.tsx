@@ -31,7 +31,7 @@ const TopicSection: React.FC<TopicSectionProps> = ({ sectionRef }) => {
                 &lt;여성국극 꿈어질듯 이어지고 사라질듯 영원하다&gt; 3월 19일 개봉
               </h3>
               <p className="compact-topic-excerpt">
-                "이지도 여성국극하는 꿈을 꾸는 거지"&lt;여성국극 꿈어질듯 이어지고 사라질듯 영원하다&gt;
+                &ldquo;이지도 여성국극하는 꿈을 꾸는 거지&rdquo;&lt;여성국극 꿈어질듯 이어지고 사라질듯 영원하다&gt;
               </p>
               <p className="compact-topic-description">
                 3월 19일 개봉 확정 &티저 포스터 공개!단 위, 남자와 여자를 뒤어넘어 예술이 되는 순간
@@ -50,7 +50,7 @@ const TopicSection: React.FC<TopicSectionProps> = ({ sectionRef }) => {
                 &lt;두 사람&gt;2/12 오늘 개봉! 전국 개봉관 리스트 대공개
               </h3>
               <p className="compact-topic-excerpt">
-                "가장 낮선 곳에서, 가장 깊은 사랑으로"&lt;두 사람&gt; 바로 오늘! 2월 12일 극장 대개봉 🦋
+                &ldquo;가장 낮선 곳에서, 가장 깊은 사랑으로&rdquo;&lt;두 사람&gt; 바로 오늘! 2월 12일 극장 대개봉 🦋
               </p>
               <p className="compact-topic-description">
                 🎬예매 바로가기▶ 인스타페이스: https://bit.ly/3A3Kfmi▶티켓링크: https://buly.kr/9
@@ -69,7 +69,7 @@ const TopicSection: React.FC<TopicSectionProps> = ({ sectionRef }) => {
                 &lt;두 사람&gt;2월 12일 극장 개봉 확정 & 보도스틸 16종 최초 공개!
               </h3>
               <p className="compact-topic-excerpt">
-                "36년 전의 못 섞일이 반평생의 사랑이 됐다" – 중앙일보 나원정 기자 세계 각국 초청 &lt;두 사람&gt;
+                &ldquo;36년 전의 못 섞일이 반평생의 사랑이 됐다&rdquo; – 중앙일보 나원정 기자 세계 각국 초청 &lt;두 사람&gt;
               </p>
               <p className="compact-topic-description">
                 2월 12일 전국 극장 개봉 확정!평생에 걸친 사랑을 연결하는 보도 스틸 16종 공개!
