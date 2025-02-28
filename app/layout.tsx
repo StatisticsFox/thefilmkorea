@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/cinema-logo.jpg', // 실제 로고 이미지 경로로 변경하세요
+        url: '/images/cinema-logo.svg', // 실제 로고 이미지 경로로 변경하세요
         width: 1200,
         height: 630,
         alt: 'The Film Korea 로고',
