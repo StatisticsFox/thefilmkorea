@@ -52,12 +52,12 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
     },
     {
       id: 4,
-      title: "여름날",
-      year: "2024",
-      director: "김태용",
-      cast: "김태리, 남주혁",
-      duration: "118분",
-      posterImage: "/images/movie4.jpg", // 실제 이미지 경로로 교체 필요
+      title: "유월",
+      year: "2018",
+      director: "이병윤",
+      cast: "심현서",
+      duration: "25분",
+      posterImage: "/images/yuwol.png", // 실제 이미지 경로로 교체 필요
       buttonColor: "#10b981"
     },
     {
