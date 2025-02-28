@@ -72,12 +72,12 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
     },
     {
       id: 6,
-      title: "동감",
-      year: "2022",
-      director: "서은영",
-      cast: "여진구, 조이현",
-      duration: "114분",
-      posterImage: "./images/donggam.png", // 실제 이미지 경로로 교체 필요
+      title: "갓건담",
+      year: "2019",
+      director: "이준섭",
+      cast: "김현목, 이상운, 차미정",
+      duration: "23분 36초",
+      posterImage: "./images/god.png", // 실제 이미지 경로로 교체 필요
       buttonColor: "#facc15"
     }
   ];
