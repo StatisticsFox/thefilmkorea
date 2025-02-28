@@ -61,9 +61,6 @@ export default function TopicsPage() {
                           src={topic.image}
                           alt={topic.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          onError={(e) => {
-                            e.currentTarget.style.display = 'none';
-                          }}
                         />
                       </div>
                     </div>

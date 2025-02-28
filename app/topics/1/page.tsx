@@ -30,7 +30,6 @@ export default function TopicOnePage() {
               src="/images/topic1_full.jpg" 
               alt="여성국극 포스터" 
               className="w-full max-w-2xl mx-auto mb-8"
-              onError={(e) => { e.currentTarget.style.display = 'none'; }}
             />
             
             <div className="text-center mb-8">

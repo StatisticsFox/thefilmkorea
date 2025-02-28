@@ -30,7 +30,6 @@ export default function TopicTwoPage() {
               src="/images/topic2_full.jpg" 
               alt="두 사람 포스터" 
               className="w-full max-w-2xl mx-auto mb-8"
-              onError={(e) => { e.currentTarget.style.display = 'none'; }}
             />
             
             <div className="text-center mb-8">
