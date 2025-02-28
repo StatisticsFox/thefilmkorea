@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- 밝고 화사한 그라데이션 배경 정의 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0F9FF" />
+      <stop offset="100%" stop-color="#E0F2FE" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED" />
+      <stop offset="50%" stop-color="#DB2777" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    
+    <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C084FC" stop-opacity="0" />
+      <stop offset="50%" stop-color="#C084FC" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0" />
+    </linearGradient>
+    
+    <clipPath id="textClip">
+      <text x="600" y="320" font-family="'Poppins', 'Montserrat', sans-serif" font-weight="900" font-size="130" text-anchor="middle">TFK</text>
+    </clipPath>
+    
+    <filter id="shadowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#6D28D9" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 밝은 배경 -->
+  <rect width="1200" height="630" fill="url(#bgGradient)" />
+  
+  <!-- 장식적인 요소 - 가벼운 파스텔 톤 원 패턴 -->
+  <circle cx="200" cy="150" r="100" fill="#DBEAFE" opacity="0.7" />
+  <circle cx="1000" cy="500" r="150" fill="#EDE9FE" opacity="0.7" />
+  <circle cx="950" cy="100" r="80" fill="#FCE7F3" opacity="0.7" />
+  <circle cx="300" cy="500" r="120" fill="#FEF3C7" opacity="0.7" />
+  
+  <!-- 필름 프레임 그룹 - 더 가볍고 밝은 스타일 -->
+  <g fill="none" stroke="#7C3AED" stroke-width="2" opacity="0.15">
+    <rect x="350" y="215" width="500" height="200" rx="5" ry="5" />
+    <rect x="370" y="235" width="460" height="160" rx="3" ry="3" />
+    
+    <!-- 필름 스프로켓 홀 -->
+    <circle cx="355" cy="245" r="5" fill="#7C3AED" />
+    <circle cx="355" cy="275" r="5" fill="#7C3AED" />
+    <circle cx="355" cy="305" r="5" fill="#7C3AED" />
+    <circle cx="355" cy="335" r="5" fill="#7C3AED" />
+    <circle cx="355" cy="365" r="5" fill="#7C3AED" />
+    <circle cx="355" cy="395" r="5" fill="#7C3AED" />
+    
+    <circle cx="845" cy="245" r="5" fill="#7C3AED" />
+    <circle cx="845" cy="275" r="5" fill="#7C3AED" />
+    <circle cx="845" cy="305" r="5" fill="#7C3AED" />
+    <circle cx="845" cy="335" r="5" fill="#7C3AED" />
+    <circle cx="845" cy="365" r="5" fill="#7C3AED" />
+    <circle cx="845" cy="395" r="5" fill="#7C3AED" />
+  </g>
+  
+  <!-- 메인 TFK 로고 (클립패스와 그라데이션) -->
+  <g filter="url(#shadowEffect)">
+    <rect x="350" y="230" width="500" height="170" fill="url(#accentGradient)" clip-path="url(#textClip)" />
+  </g>
+  
+  <!-- 회사명 - 어두운 텍스트 -->
+  <text x="600" y="430" font-family="'Poppins', 'Montserrat', Helvetica, Arial, sans-serif" font-weight="700" font-size="50" text-anchor="middle" fill="#1E40AF">THE FILM KOREA</text>
+  
+  <!-- 태그라인 - 중간 톤 -->
+  <text x="600" y="480" font-family="'Poppins', 'Montserrat', Helvetica, Arial, sans-serif" font-weight="400" font-size="25" text-anchor="middle" fill="#6D28D9" letter-spacing="4">독립·예술영화 배급사</text>
+  
+  <!-- 모던한 장식 요소 -->
+  <circle cx="600" cy="175" r="10" fill="#EC4899" opacity="0.8" />
+  <path d="M 550,175 L 650,175" stroke="#7C3AED" stroke-width="1.5" opacity="0.5" />
+  
+  <!-- 웹주소 - 중간 톤 -->
+  <text x="600" y="540" font-family="'Poppins', 'Montserrat', Helvetica, Arial, sans-serif" font-weight="400" font-size="20" text-anchor="middle" fill="#6D28D9" letter-spacing="1">thefilmkorea.pages.dev</text>
+
+  <!-- 필름릴 아이콘 -->
+  <g transform="translate(595, 95) scale(0.04)" fill="#7C3AED">
+    <path d="M512 152c19.8 0 36-16.2 36-36s-16.2-36-36-36-36 16.2-36 36 16.2 36 36 36zm-99.7 88.2c-39.4-39.4-103.1-39.4-142.5 0s-39.4 103.1 0 142.5c15.2 15.2 33.3 25.5 52.5 30.6 8.3 2.2 12.5-6.2 7.6-15.2 -8.5-15.5-13.1-33.1-13.1-51.1 0-57.3 46.7-104 104-104 18 0 35.6 4.6 51.1 13.1 9 4.9 17.4.7 15.2-7.6 -5.1-19.3-15.4-37.4-30.6-52.5zm122.3 142.5c-39.4 39.4-39.4 103.1 0 142.5s103.1 39.4 142.5 0c15.2-15.2 25.5-33.3 30.6-52.5 2.2-8.3-6.2-12.5-15.2-7.6 -15.5 8.5-33.1 13.1-51.1 13.1 -57.3 0-104-46.7-104-104 0-18 4.6-35.6 13.1-51.1 4.9-9 .7-17.4-7.6-15.2 -19.3 5.1-37.4 15.4-52.5 30.6z" />
+  </g>
+</svg>
