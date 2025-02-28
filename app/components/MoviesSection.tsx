@@ -42,12 +42,12 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({ sectionRef }) => {
     },
     {
       id: 3,
-      title: "울고싶은 나는 고양이 가면을 쓴다",
-      year: "2020",
-      director: "사토 준이치",
-      cast: "시다 미라이, 하나에 나츠키",
-      duration: "104분",
-      posterImage: "/images/cat.png", // 실제 이미지 경로로 교체 필요
+      title: "경로를 재탐색 합니다",
+      year: "2022",
+      director: "김내은",
+      cast: "오은재, 하영주, 윤선근",
+      duration: "26분 33초",
+      posterImage: "/images/research.png", // 실제 이미지 경로로 교체 필요
       buttonColor: "#facc15"
     },
     {
