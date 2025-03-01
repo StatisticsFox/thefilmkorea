@@ -1,14 +1,15 @@
 'use client';
-
 export default function TopicOnePage() {
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center h-screen pt-20"> {/* 상단 패딩 추가 */}
       <div className="text-center">
+        <h1 className="text-4xl font-bold text-red-500"> </h1>
+        <h1 className="text-4xl font-bold text-white">.</h1> {/* 색상을 하얀색으로 변경 */}
         <h1 className="text-4xl font-bold text-red-500">페이지를 찾을 수 없습니다</h1>
         <p className="mt-4">요청하신 페이지가 존재하지 않습니다.</p>
-        <a href="/topics" className="mt-6 inline-block px-4 py-2 bg-blue-500 text-white rounded">
+        {/* <a href="/topics" className="mt-6 inline-block px-4 py-2 bg-blue-500 text-white rounded">
           토픽 목록으로 돌아가기
-        </a>
+        </a> */}
       </div>
     </div>
   );
