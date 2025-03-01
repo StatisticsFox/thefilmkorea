@@ -21,20 +21,20 @@ const AboutSection: React.FC<AboutSectionProps> = ({ sectionRef }) => {
             우리는 새롭고 진취적인 영화적 시각을 가진 창작자들의 작품을 관객들에게 소개하는 것을 목표로 합니다.
           </p>
           <p className="about-text">
-            매년 10여 편의 국내외 독립·예술영화를 배급하며, 영화제 출품 및 부가판권 유통을 통해
+            매년 6여 편의 국내외 독립·예술영화를 배급하며, 영화제 출품 및 부가판권 유통을 통해
             작품이 더 많은 관객과 만날 수 있도록 지원하고 있습니다.
           </p>
           <div className="grid grid-cols-3">
             <div className="stat-card">
-              <h3 className="stat-number">200+</h3>
+              <h3 className="stat-number">50+</h3>
               <p className="stat-label">배급 작품 수</p>
             </div>
             <div className="stat-card">
-              <h3 className="stat-number">50+</h3>
+              <h3 className="stat-number">4+</h3>
               <p className="stat-label">영화제 수상</p>
             </div>
             <div className="stat-card">
-              <h3 className="stat-number">10년+</h3>
+              <h3 className="stat-number">3년+</h3>
               <p className="stat-label">배급 경력</p>
             </div>
           </div>
