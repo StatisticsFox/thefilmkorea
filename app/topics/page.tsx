@@ -15,7 +15,7 @@ interface Topic {
 
 const TopicListSection: React.FC = () => {
   // topics가 없을 경우를 대비한 빈 배열 기본값 설정
-  const topicsData = topics || [];
+  const topicsData: Topic[] = topics || [];
   
   return (
     <section className="topic-section">
