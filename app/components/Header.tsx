@@ -9,7 +9,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ currentSection }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  
+
   // 컴포넌트가 마운트될 때 로컬 스토리지에서 테마 설정 로드
   useEffect(() => {
     // 초기 테마 설정 로드
@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ currentSection }) => {
       setIsDarkMode(true);
       document.documentElement.setAttribute('data-theme', 'dark');
     }
-    
+
     // 스크롤 이벤트 핸들러
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ currentSection }) => {
         setIsScrolled(false);
       }
     };
-    
+
     // 스크롤 이벤트 리스너 등록
     window.addEventListener('scroll', handleScroll);
     
@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ currentSection }) => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
   // 테마 전환 핸들러
   const toggleTheme = () => {
     const newTheme = isDarkMode ? 'light' : 'dark';
@@ -51,18 +51,18 @@ const Header: React.FC<HeaderProps> = ({ currentSection }) => {
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
   };
-  
+
   // 스크롤에 따른 헤더 배경 스타일
   const headerStyle = {
-    backgroundColor: isScrolled 
-      ? (isDarkMode ? '#1a1a1a' : '#ffffff') 
+    backgroundColor: isScrolled
+      ? (isDarkMode ? '#1a1a1a' : '#ffffff')
       : 'transparent',
     transition: 'background-color 0.3s ease',
     position: 'fixed',
     width: '100%',
     zIndex: 50,
   } as React.CSSProperties;
-  
+
   return (
     <header style={headerStyle}>
       <div className="logo">

@@ -1,12 +1,24 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface IntroSectionProps {
-  // HTMLElement | null을 허용하도록 타입 수정
   sectionRef: React.RefObject<HTMLElement | null>;
 }
 
 const IntroSection: React.FC<IntroSectionProps> = ({ sectionRef }) => {
+  const [showContent, setShowContent] = useState(false);
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const textContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // 페이지 로드 후 1초 뒤에 콘텐츠 표시
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section
       id="intro"
@@ -20,15 +32,39 @@ const IntroSection: React.FC<IntroSectionProps> = ({ sectionRef }) => {
         height: '50vh',
       }}
     >
-      {/* 오버레이 제거함 */}
+      {/* 텍스트 가독성을 위한 배경 레이어 (애니메이션 적용) */}
+      <div 
+        ref={overlayRef}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6))',
+          opacity: showContent ? 1 : 0,
+          transition: 'opacity 1.5s ease',
+          zIndex: 1
+        }}
+      />
+      
       <div className="container text-center" style={{ position: 'relative', zIndex: 10 }}>
-        <div className="text-reveal-container">
+        <div 
+          ref={textContainerRef}
+          className="text-reveal-container"
+          style={{
+            opacity: showContent ? 1 : 0,
+            transform: `translateY(${showContent ? '0' : '20px'})`,
+            transition: 'opacity 1.5s ease, transform 1.5s ease',
+          }}
+        >
           <h2
             style={{
               fontSize: '4.5rem',
-              color: '#00000',
+              color: '#000000',
               marginBottom: '1.5rem',
-              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+              textShadow: '0px 0px 10px rgba(255, 255, 255, 0.8)',
+              fontWeight: 'bold',
             }}
             className="scroll-reveal"
           >
@@ -37,37 +73,39 @@ const IntroSection: React.FC<IntroSectionProps> = ({ sectionRef }) => {
           <p
             style={{
               fontSize: '2.5rem',
-              color: '#00000',
+              color: '#000000',
               maxWidth: '900px',
               margin: '0 auto',
               marginBottom: '3rem',
-              textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
+              textShadow: '0px 0px 8px rgba(255, 255, 255, 0.8)',
+              fontWeight: '500',
             }}
             className="scroll-reveal delay-300"
           >
             새로운 관점으로 세상을 바라보는 독립·예술영화 배급사
           </p>
-          {/* <button
-            className="btn scroll-reveal delay-600"
-            style={{
-              fontSize: '1.2rem',
-              padding: '0.8rem 2.5rem',
-            }}
-          >
-            자세히 보기
-          </button> */}
         </div>
-        {/* 스크롤 화살표 */}
+        
+        {/* 스크롤 화살표 (애니메이션 적용) */}
         <div
           style={{
             position: 'absolute',
             bottom: '2rem',
             left: '50%',
-            transform: 'translateX(-50%)'
+            transform: 'translateX(-50%)',
+            opacity: showContent ? 1 : 0,
+            transition: 'opacity 2s ease',
+            transitionDelay: '0.5s'
           }}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M12 5L12 19M12 19L19 12M12 19L5 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path 
+              d="M12 5L12 19M12 19L19 12M12 19L5 12" 
+              stroke="#000000" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            />
           </svg>
         </div>
       </div>

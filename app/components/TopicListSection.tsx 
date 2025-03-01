@@ -1,0 +1,51 @@
+// app/components/MoviesSection.tsx
+import React from 'react';
+import MovieCardList from './MovieCardList';
+
+// 영화 데이터 타입 정의
+export interface Movie {
+  imageUrl: string;
+  title: string;
+  description: string;
+  date: string;
+  likeCount: number;
+  linkUrl: string;
+}
+
+const MoviesSection: React.FC = () => {
+  // 샘플 영화 데이터
+  const moviesData: Movie[] = [
+    {
+      imageUrl: '/images/hozo.png',
+      title: '<여성국극 꽃아칠호 이야기고 사리칠호 영원하다> 3월 19일 개봉 & 티저 포스터 공개!',
+      description: '"아직도 여성국극하는 꿈을 꾸는 거지" - 여성국극 꽃아칠호 이야기고 사리칠호 영원하다',
+      date: '2025.2.20',
+      likeCount: 0,
+      linkUrl: '/movies/1'
+    },
+    {
+      imageUrl: '/images/god.png',
+      title: '<두 사람> 2/12 오늘 개봉! 전국 개봉관 리스트 대공개🌈',
+      description: '"가장 낮선 곳에서, 가장 깊은 사랑으로" - <두 사람> 바로 오늘! 2월 12일 국장 대개봉',
+      date: '2025.2.12',
+      likeCount: 0,
+      linkUrl: '/movies/2'
+    },
+    {
+      imageUrl: '/images/cat.png',
+      title: '<두 사람> 2월 12일 극장 개봉 확정 & 보도스틸 16종 대공개!',
+      description: '"36년 전의 쫓 선물이 반평생의 사랑이 됐다" - 중앙일보',
+      date: '2025.1.7',
+      likeCount: 0,
+      linkUrl: '/movies/3'
+    }
+  ];
+
+  return (
+    <section id="movies">
+      <MovieCardList movies={moviesData} title="최신 영화 소식" moreLink="/movies" />
+    </section>
+  );
+};
+
+export default MoviesSection;
