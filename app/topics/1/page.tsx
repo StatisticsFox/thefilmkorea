@@ -6,7 +6,8 @@ import { getTopicData } from '../../utils/topicsData';
 
 // 토픽 상세 페이지 컴포넌트
 export default function TopicDetailPage({ params }: { params: { id: string } }) {
-  const topic = getTopicData(params.id);
+  const topicId = params.id;
+  const topic = getTopicData(topicId);
   
   // 토픽이 없는 경우 404 페이지로 리다이렉트
   if (!topic) {
