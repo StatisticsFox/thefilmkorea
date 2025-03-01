@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer>
+    <footer className="mt-20 pt-16"> {/* 상단 여백 추가 */}
       <div className="container">
         <div className="footer-content">
           <div className="footer-intro">
