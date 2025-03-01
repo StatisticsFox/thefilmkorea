@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="footer-section">
               <h4>연락처</h4>
-              <p>전화: 010-7451-1002</p>
+              <p>전화: 010-8053-1002</p>
               <p>이메일: thfilmkorea@gmail.com</p>
             </div>
             <div className="footer-section">
