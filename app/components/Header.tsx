@@ -90,7 +90,7 @@ const Header: React.FC<HeaderProps> = ({ currentSection }) => {
           <li>
             <a href="#cinema-intro" className={currentSection === 3 ? 'text-yellow' : ''}>
               소개
-            </a>
+            </a> 
           </li>
           <li>
             <a href="#movies" className={currentSection === 4 ? 'text-yellow' : ''}>
